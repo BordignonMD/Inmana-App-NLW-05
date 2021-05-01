@@ -19,8 +19,8 @@ defmodule Inmana.Restaurant do
     timestamps()
   end
 
-  def changeset(params) do
-    %__MODULE__{}
+  def changeset(restaurant \\ %__MODULE__{}, params) do
+    restaurant
     |> cast(params, @required_params)
     |> validate_required(@required_params)
     |> validate_length(:name, min: 2)

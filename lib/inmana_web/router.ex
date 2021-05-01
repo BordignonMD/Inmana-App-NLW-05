@@ -10,9 +10,9 @@ defmodule InmanaWeb.Router do
 
     get "/", WelcomeController, :index
 
-    post "/restaurants", RestaurantsController, :create
+    resources "restaurants", RestaurantsController, only: [:create, :delete, :index, :show]
 
-    resources "/supplies", SuppliesController, only: [:create, :show]
+    resources "/supplies", SuppliesController, only: [:create, :delete, :index, :update, :show]
   end
 
   # Enables LiveDashboard only for development

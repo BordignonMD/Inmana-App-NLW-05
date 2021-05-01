@@ -20,8 +20,8 @@ defmodule Inmana.Supply do
     timestamps()
   end
 
-  def changeset(params) do
-    %__MODULE__{}
+  def changeset(supply \\ %__MODULE__{}, params) do
+    supply
     |> cast(params, @required_params)
     |> validate_required(@required_params)
     |> validate_length(:description, min: 3)

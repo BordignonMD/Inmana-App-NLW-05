@@ -5,20 +5,39 @@ Through the system it is possible to register the restaurant, the supplies used 
 Restaurant Creation
   * POST http://localhost:4000/api/restaurants as a parameter use "name", "email"
 
+Restaurant Delete
+  * DELETE http://localhost:4000/api/restaurants/ID_RESTAURANT where "ID_RESTAURANT" is the restaurant id value.
+
+Restaurant Index
+  * GET http://localhost:4000/api/restaurants
+
+Restaurant Show
+  * GET http://localhost:4000/api/restaurants/ID_RESTAURANT where "ID_RESTAURANT" is the restaurant id value.
+
+Restaurant Update
+  * PUT http://localhost:4000/api/restaurants/ID_RESTAURANT where "ID_RESTAURANT" is the restaurant id value. As parameter use "name".
+
 Supply Creation/Addition
   * POST http://localhost:4000/api/supplies as a parameter use "restaurant_id", "description", "expiration_date", "responsible"
 
-Supply valid for the Week
-  * GET http://localhost:4000/api/supplies/ID_RESTAURANT where "ID_RESTAURANT" is the restaurant id value.
+Supply Delete
+  * DELETE http://localhost:4000/api/supplies/ID_SUPPLY where "ID_SUPPLY" is the supply id value.
+
+Supply Index
+  * GET http://localhost:4000/api/supplies
+
+Supply Show
+  * GET http://localhost:4000/api/supplies/ID_SUPPLY where "ID_SUPPLY" is the supply id value.
+
+Supply Update
+  * PUT http://localhost:4000/api/supplies/ID_SUPPLY where "ID_SUPPLY" is the supply id value. As parameter use "description", "expiration_date", "reponsible"
+
+
 
 ## Future requirements
 
-  * List registered restaurants
-  * Change registered restaurants
-  * Delete registered restaurants
   * List supplies by restaurant
-  * Change supplies
-  * Delete supplies
+  * Increase test coverage
 
 # Inmana
 
