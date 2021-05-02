@@ -23,6 +23,14 @@ defmodule InmanaWeb.SuppliesController do
     end
   end
 
+  def index(conn, %{"restaurants_id" => restaurant_id}) do
+    with supplies <- Inmana.index_restaurant_supplies(restaurant_id) do
+      conn
+      |> put_status(:ok)
+      |> render("index.json", supplies: supplies)
+    end
+  end
+
   def index(conn, _params) do
     with supplies <- Inmana.index_supply() do
       conn
