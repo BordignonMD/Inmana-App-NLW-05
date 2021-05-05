@@ -3,7 +3,7 @@ Inmana is an application for controlling expiration of supplies in restaurants.
 Through the system it is possible to register the restaurant, the supplies used and their expiration date. Weekly, the supplies that expire during the week will be sent to the restaurant's email.
 
 Restaurant Creation
-  * POST http://localhost:4000/api/restaurants as a parameter use "name", "email"
+  * POST http://localhost:4000/api/restaurants as a parameter use "name", "email".
 
 Restaurant Delete
   * DELETE http://localhost:4000/api/restaurants/ID_RESTAURANT where "ID_RESTAURANT" is the restaurant id value.
@@ -18,7 +18,7 @@ Restaurant Update
   * PUT http://localhost:4000/api/restaurants/ID_RESTAURANT where "ID_RESTAURANT" is the restaurant id value. As parameter use "name".
 
 Supply Creation/Addition
-  * POST http://localhost:4000/api/supplies as a parameter use "restaurant_id", "description", "expiration_date", "responsible"
+  * POST http://localhost:4000/api/supplies as a parameter use "restaurant_id", "description", "expiration_date", "responsible".
 
 Supply Delete
   * DELETE http://localhost:4000/api/supplies/ID_SUPPLY where "ID_SUPPLY" is the supply id value.
@@ -30,13 +30,13 @@ Supply Show
   * GET http://localhost:4000/api/supplies/ID_SUPPLY where "ID_SUPPLY" is the supply id value.
 
 Supply Update
-  * PUT http://localhost:4000/api/supplies/ID_SUPPLY where "ID_SUPPLY" is the supply id value. As parameter use "description", "expiration_date", "reponsible"
+  * PUT http://localhost:4000/api/supplies/ID_SUPPLY where "ID_SUPPLY" is the supply id value. As parameter use "description", "expiration_date", "reponsible".
 
-
+Supply Index for Restaurant
+  * GET http://localhost:4000/api/restaurant/ID_RESTAURANT/supplies WHERE "ID_RESTAURANT" is the restaurant id value.
 
 ## Future requirements
 
-  * List supplies by restaurant
   * Increase test coverage
 
 # Inmana
@@ -89,3 +89,7 @@ mix ecto.gen.migration create_example_table
 Perform migrations
 
 mix ecto.migrate
+
+## Tests
+This project was tested using the Excoveralls library.
+The test coverage is approximately 68.6%. <a href="excoveralls.html"></a>
