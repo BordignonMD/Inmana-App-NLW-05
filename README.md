@@ -92,4 +92,5 @@ mix ecto.migrate
 
 ## Tests
 This project was tested using the Excoveralls library.
-The test coverage is approximately 68.6%. <a href="excoveralls.html"></a>
+The test coverage is approximately 68.6%. 
+<a href="/excoveralls.html">Excoveralls.html</a>
