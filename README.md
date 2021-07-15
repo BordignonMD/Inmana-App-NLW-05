@@ -2,6 +2,56 @@
 Inmana is an application for controlling expiration of supplies in restaurants.
 Through the system it is possible to register the restaurant, the supplies used and their expiration date. Weekly, the supplies that expire during the week will be sent to the restaurant's email.
 
+  * [Technologies](#Technologies)
+  * [Installation](#Installation)
+  * [Requirements](#Requirements)
+  * [Phoenix references](#Phoenix-references)
+  * [Support](#Support)
+
+# Technologies
+
+This project was developed with the following technologies:
+
+  * [Elixir](https://elixir-lang.org/)
+  * [Phoenix](https://phoenixframework.org/)
+  * [PostgreSQL](https://www.postgresql.org/)
+
+## Installation
+
+1. Clone this repository
+
+```
+git clone https://github.com/BordignonMD/Inmana-App-NLW-05.git
+```
+
+2. Change directory location
+
+```
+cd /path/to/inmana-app-nlw-05
+```
+
+3. Install and compile dependencies
+
+```
+mix do deps.get, deps.compile
+```
+
+4. Create, migrate, and seed the database
+
+```
+mix ecto.create
+mix ecto.migrate
+mix ecto.seed
+```
+
+5. Start the server
+
+```
+mix phx.server
+```
+
+## Requirements
+
 Restaurant Creation
   * POST http://localhost:4000/api/restaurants as a parameter use "name", "email".
 
@@ -39,19 +89,7 @@ Supply Index for Restaurant
 
   * Increase test coverage
 
-# Inmana
-
-To start your Phoenix server:
-
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
+## Phoenix references
 
   * Official website: https://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html
@@ -59,38 +97,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
 
-## Starting the project
-To create a new project MIX without using HTML and CSS:
+## Support
 
-  * mix phx.new rocketpay --no-webpack --no-html
+Bug reports and feature requests can be filed with the rest for the Phoenix project here:
 
-## Credo
-Creating project lint file
-
-  * mix credo gen.config
-
-## Database
-This project used the PostgreSQL database
-
-Make sure you have installed PostgreSQL or use Docker
-Access the file config/config.ex and the file config/test.ex and configure them according to your PostgreSQL installation data
-Shortcut to create the bank and run migrates
-
-mix ecto.setup
-Creates the database
-
-mix ecto.create
-Delete the database
-
-mix ecto.drop
-Creates a migration
-
-mix ecto.gen.migration create_example_table
-Perform migrations
-
-mix ecto.migrate
-
-## Tests
-This project was tested using the Excoveralls library.
-The test coverage is approximately 68.6%. 
-<a href="/excoveralls.html">Excoveralls.html</a>
+  * [File Bug Reports and Features](https://github.com/BordignonMD/Inmana-App-NLW-05/issues)
